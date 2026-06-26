@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+    <div class="card card-large">
+        <div class="action-row">
+            <a href="home.html" class="btn btn-outline">Back Home</a>
+            <a href="login.html" class="btn btn-outline">Logout</a>
+        </div>
+        <h1>Student Registration.</h1>
+        <h2>Create Account.</h2>
+        
+        <form action="login.html">
+            <div class="form-group">
+                <input type="text" 
+                       id="fullname" 
+                       placeholder="Full Name" 
+                       pattern="^[A-Za-z\s]{2,100}$" 
+                       title="Name must be between 2 and 50 characters long and contain only letters and spaces." 
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" 
+                       id="student-id" 
+                       placeholder="Student ID" 
+                       pattern="^[A-Za-z0-9]{5,15}$" 
+                       title="Student ID must be between 5 and 15 alphanumeric characters." 
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" 
+                       id="email" 
+                       placeholder="Email Address" 
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <select id="faculty" required>
+                    <option value="" disabled selected>Faculty</option>
+                    <option value="science">Science</option>
+                    <option value="business">Business</option>
+                    <option value="arts">Arts</option>
+                    <option value="education">Education</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" 
+                       id="password" 
+                       placeholder="Password" 
+                       pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" 
+                       title="Password must be at least 8 characters long and include both letters and numbers." 
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" 
+                       id="confirm-password" 
+                       placeholder="Confirm password" 
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" required> I agree to Terms & Conditions
+                </label>
+            </div>
+            
+            <div class="form-actions-bottom">
+                <a href="home.html" class="btn btn-outline btn-block">Back Home</a>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
